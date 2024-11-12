@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    
+    <title>D3 Price Visualization</title>
+    
+    
+
+</head>
+<body>
+    <h1>Price Visualization of ETH and UNI</h1>
+    <div id="priceSlider"></div>
+    <div id="distributionPriceSlider"></div>
+    <div id="chart"></div>
+    <div id="chart2"></div>
+
+    
+    <script type="module">
+        import { plotLiquidityChart } from './js/distributiongraph.js';
+    
+        // Call the function with the desired pool address
+        plotLiquidityChart('0xcbcdf9626bc03e24f779434178a73a0b4bad62ed')
+          .catch(error => {
+            console.error('An error occurred while plotting the chart:', error);
+          });
+      </script>
+</body>
+</html>
